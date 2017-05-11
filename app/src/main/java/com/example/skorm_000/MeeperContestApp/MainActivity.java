@@ -1,4 +1,4 @@
-package com.example.skorm_000.contestapp;
+package com.example.skorm_000.MeeperContestApp;
 
 import android.content.Context;
 import android.content.DialogInterface;
@@ -13,11 +13,9 @@ import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
-import android.view.MotionEvent;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
-import android.widget.Button;
 import android.widget.EditText;
 import android.widget.FrameLayout;
 import android.widget.ImageButton;
@@ -75,9 +73,9 @@ public class MainActivity extends AppCompatActivity {
 
     Context context;
 
-    com.example.skorm_000.contestapp.NoDefaultSpinner tag1Spinner;
-    com.example.skorm_000.contestapp.NoDefaultSpinner tag2Spinner;
-    com.example.skorm_000.contestapp.NoDefaultSpinner tag3Spinner;
+    com.example.skorm_000.MeeperContestApp.NoDefaultSpinner tag1Spinner;
+    com.example.skorm_000.MeeperContestApp.NoDefaultSpinner tag2Spinner;
+    com.example.skorm_000.MeeperContestApp.NoDefaultSpinner tag3Spinner;
     Spinner tag1SpinnerResults;
     Spinner tag2SpinnerResults;
     Spinner tag3SpinnerResults;
@@ -595,7 +593,7 @@ public class MainActivity extends AppCompatActivity {
 
         switch (spinnerNumber){
             case 1:
-                tag1Spinner = (com.example.skorm_000.contestapp.NoDefaultSpinner) findViewById(R.id.tag1DropDown);
+                tag1Spinner = (com.example.skorm_000.MeeperContestApp.NoDefaultSpinner) findViewById(R.id.tag1DropDown);
                 final ArrayList<String> tag1Items = tag1List;//new String[]{"New Event", "Brick Fest Live", "Minefaire", "Puma Palooza"};
                 ArrayAdapter<String> adapter1 = new ArrayAdapter<String>(context, android.R.layout.simple_spinner_dropdown_item, tag1Items);
                 tag1Spinner.setAdapter(adapter1);
@@ -626,7 +624,7 @@ public class MainActivity extends AppCompatActivity {
                 });
                 break;
             case 2:
-                tag2Spinner = (com.example.skorm_000.contestapp.NoDefaultSpinner) findViewById(R.id.tag2DropDown);
+                tag2Spinner = (com.example.skorm_000.MeeperContestApp.NoDefaultSpinner) findViewById(R.id.tag2DropDown);
                 final ArrayList<String> tag2Items = tag2List;//new String[]{"New Location", "Philidalphia", "Madison"};
                 ArrayAdapter<String> adapter2 = new ArrayAdapter<String>(context, android.R.layout.simple_spinner_dropdown_item, tag2Items);
                 tag2Spinner.setAdapter(adapter2);
@@ -657,7 +655,7 @@ public class MainActivity extends AppCompatActivity {
                 });
                 break;
             case 3:
-                tag3Spinner = (com.example.skorm_000.contestapp.NoDefaultSpinner) findViewById(R.id.tag3DropDown);
+                tag3Spinner = (com.example.skorm_000.MeeperContestApp.NoDefaultSpinner) findViewById(R.id.tag3DropDown);
                 final ArrayList<String> tag3Items = tag3List;//new String[]{"New Day", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"};
                 ArrayAdapter<String> adapter3 = new ArrayAdapter<String>(context, android.R.layout.simple_spinner_dropdown_item, tag3Items);
                 tag3Spinner.setAdapter(adapter3);

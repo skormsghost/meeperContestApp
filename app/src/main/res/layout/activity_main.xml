@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     android:focusable="true"
     android:focusableInTouchMode="true"
-    tools:context="com.example.skorm_000.contestapp.MainActivity"
+    tools:context="com.example.skorm_000.MeeperContestApp.MainActivity"
     tools:layout_editor_absoluteY="81dp"
     tools:layout_editor_absoluteX="0dp">
 
@@ -93,7 +93,7 @@
                         android:layout_height="match_parent"
                         android:layout_weight="1"
                         android:gravity="center_vertical"
-                        android:text="Fill in your information and be entered to win a free meeperBOT"
+                        android:text="Fill in your information and be entered to win a free meeperBOT."
                         android:textColor="#757575"
                         android:textSize="25px"
                         android:visibility="visible" />
@@ -122,7 +122,15 @@
                         android:gravity="bottom"
                         android:hint="First Name"
                         android:inputType="textCapWords|textNoSuggestions|textPersonName"
-                        android:textColor="#212121" />
+                        android:textColor="#212121"
+                        android:nextFocusDown="@+id/lastNameInput" />
+                </FrameLayout>
+
+                <FrameLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1.7">
+
                 </FrameLayout>
 
                 <FrameLayout
@@ -146,17 +154,45 @@
 
             </LinearLayout>
 
-            <FrameLayout
+            <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_weight="1.11">
 
-                <ImageView
+                <FrameLayout
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:layout_gravity="center"
-                    app:srcCompat="@drawable/formline_graphic" />
-            </FrameLayout>
+                    android:layout_weight="1">
+
+                    <ImageView
+                        android:id="@+id/imageView12"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="bottom"
+                        app:srcCompat="@drawable/formline_short_graphic" />
+                </FrameLayout>
+
+                <FrameLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1.7">
+
+                </FrameLayout>
+
+                <FrameLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1">
+
+                    <ImageView
+                        android:id="@+id/imageView13"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="bottom"
+                        app:srcCompat="@drawable/formline_short_graphic" />
+                </FrameLayout>
+
+            </LinearLayout>
 
             <FrameLayout
                 android:layout_width="match_parent"
@@ -956,7 +992,7 @@
                         android:layout_height="match_parent"
                         android:layout_weight="1.01">
 
-                        <com.example.skorm_000.contestapp.NoDefaultSpinner
+                        <com.example.skorm_000.MeeperContestApp.NoDefaultSpinner
                             android:id="@+id/tag1DropDown"
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
@@ -1013,7 +1049,7 @@
                         android:layout_height="match_parent"
                         android:layout_weight="1.01">
 
-                        <com.example.skorm_000.contestapp.NoDefaultSpinner
+                        <com.example.skorm_000.MeeperContestApp.NoDefaultSpinner
                             android:id="@+id/tag2DropDown"
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
@@ -1070,7 +1106,7 @@
                         android:layout_height="match_parent"
                         android:layout_weight="1.01">
 
-                        <com.example.skorm_000.contestapp.NoDefaultSpinner
+                        <com.example.skorm_000.MeeperContestApp.NoDefaultSpinner
                             android:id="@+id/tag3DropDown"
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"

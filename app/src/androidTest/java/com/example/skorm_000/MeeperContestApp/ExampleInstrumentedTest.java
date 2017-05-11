@@ -1,4 +1,4 @@
-package com.example.skorm_000.contestapp;
+package com.example.skorm_000.MeeperContestApp;
 
 import android.content.Context;
 import android.support.test.InstrumentationRegistry;
