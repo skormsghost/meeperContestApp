@@ -126,10 +126,17 @@ public class MainActivity extends AppCompatActivity {
                     if(addressInput.getText().toString().equals("") || addressInput.getText().toString().equals(null)){
                         addressInput.setText(" ");
                     }
-                    String uniqueID = UUID.randomUUID().toString();
-                    String csvString = uniqueID + "," + firstNameInput.getText() + "," + lastNameInput.getText() + "," + emailInput.getText() + "," + phoneInput.getText() + "," + addressInput.getText() + "," + Calendar.getInstance().getTime() + "," + tag1 + "," + tag2 + "," + tag3 + ";\n";
 
-                    showPopUp(csvString);
+                    String firstName = firstNameInput.getText().toString().replace(",", "");
+                    String lastName = lastNameInput.getText().toString().replace(",", "");
+                    String email = emailInput.getText().toString().replace(",", "");
+                    String phone = phoneInput.getText().toString().replace(",", "");
+                    String address = addressInput.getText().toString().replace(",", "");
+
+                    String uniqueID = UUID.randomUUID().toString();
+                    String csvString = uniqueID + "," + firstName + "," + lastName + "," + email + "," + phone + "," + address + "," + Calendar.getInstance().getTime() + "," + tag1 + "," + tag2 + "," + tag3 + ";\n";
+Log.d("MYTAG", csvString);
+                    //showPopUp(csvString);
                 }
             }
         });
