@@ -240,6 +240,7 @@
                     android:gravity="bottom"
                     android:hint="Phone"
                     android:inputType="phone"
+                    android:maxLength="10"
                     android:textColor="#212121" />
             </FrameLayout>
 
@@ -261,7 +262,7 @@
                 android:layout_height="match_parent"
                 android:layout_weight="1.05">
 
-                <EditText
+                <!--<EditText
                     android:id="@+id/addressInput"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
@@ -271,7 +272,7 @@
                     android:gravity="bottom"
                     android:hint="Address"
                     android:inputType="textPostalAddress"
-                    android:textColor="#212121" />
+                    android:textColor="#212121" />-->
             </FrameLayout>
 
             <FrameLayout
@@ -279,11 +280,11 @@
                 android:layout_height="match_parent"
                 android:layout_weight="1.1">
 
-                <ImageView
+                <!--<ImageView
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:layout_gravity="center"
-                    app:srcCompat="@drawable/formline_graphic" />
+                    app:srcCompat="@drawable/formline_graphic" />-->
 
             </FrameLayout>
 

@@ -53,7 +53,7 @@ public class MainActivity extends AppCompatActivity {
     EditText lastNameInput;
     EditText phoneInput;
     EditText emailInput;
-    EditText addressInput;
+    //EditText addressInput;
 
     String tag1 = ""; //TODO set up prefs on what the previous event was
     String tag2 = "";
@@ -109,7 +109,7 @@ public class MainActivity extends AppCompatActivity {
         lastNameInput = (EditText) findViewById(R.id.lastNameInput);
         phoneInput = (EditText) findViewById(R.id.phoneInput);
         emailInput = (EditText) findViewById(R.id.emailInput);
-        addressInput = (EditText) findViewById(R.id.addressInput);
+        //addressInput = (EditText) findViewById(R.id.addressInput);
 
         ImageButton submitButton = (ImageButton) findViewById(R.id.submitButton);
         submitButton.setOnClickListener(new View.OnClickListener() {
@@ -120,23 +120,22 @@ public class MainActivity extends AppCompatActivity {
                         &&!emailInput.getText().toString().equals("") && !emailInput.getText().toString().equals(null))
                         /*&&!phoneInput.getText().toString().equals("") && !phoneInput.getText().toString().equals(null)
                         &&!addressInput.getText().toString().equals("") && !addressInput.getText().toString().equals(null))*/{
-                    if((phoneInput.getText().toString().equals("") || phoneInput.getText().toString().equals(null))){
+                    if((phoneInput.getText().toString().equals("") || phoneInput.getText().toString().equals(null)) || phoneInput.getText().length() < 10 || phoneInput.getText().length() > 10){
                         phoneInput.setText(" ");
                     }
-                    if(addressInput.getText().toString().equals("") || addressInput.getText().toString().equals(null)){
+                    /*if(addressInput.getText().toString().equals("") || addressInput.getText().toString().equals(null)){
                         addressInput.setText(" ");
-                    }
+                    }*/
 
                     String firstName = firstNameInput.getText().toString().replace(",", "");
                     String lastName = lastNameInput.getText().toString().replace(",", "");
                     String email = emailInput.getText().toString().replace(",", "");
                     String phone = phoneInput.getText().toString().replace(",", "");
-                    String address = addressInput.getText().toString().replace(",", "");
+                    //String address = addressInput.getText().toString().replace(",", "");
 
                     String uniqueID = UUID.randomUUID().toString();
-                    String csvString = uniqueID + "," + firstName + "," + lastName + "," + email + "," + phone + "," + address + "," + Calendar.getInstance().getTime() + "," + tag1 + "," + tag2 + "," + tag3 + ";\n";
-Log.d("MYTAG", csvString);
-                    //showPopUp(csvString);
+                    String csvString = uniqueID + "," + firstName + " " + lastName + "," + email + "," + phone + ","/* + address + ","*/ + Calendar.getInstance().getTime() + "," + tag1 + "," + tag2 + "," + tag3 + ";\n";
+                    showPopUp(csvString);
                 }
             }
         });
@@ -307,7 +306,7 @@ Log.d("MYTAG", csvString);
                         lastNameInput.getText().clear();
                         emailInput.getText().clear();
                         phoneInput.getText().clear();
-                        addressInput.getText().clear();
+                        //addressInput.getText().clear();
                         popUp.setVisibility(View.GONE);
                         mainScreen.setVisibility(View.VISIBLE);
                     }
@@ -881,9 +880,9 @@ Log.d("MYTAG", csvString);
                 infoList.add(insert);
             }
 
-            if((infoList.get(7).equals(tempTag1Results) || tempTag1Results == null || tempTag1Results == "")
-                    && (infoList.get(8).equals(tempTag2Results) || tempTag2Results == null || tempTag2Results == "")
-                    && (infoList.get(9).equals(tempTag3Results) || tempTag3Results == null || tempTag3Results == "")){
+            if((infoList.get(5).equals(tempTag1Results) || tempTag1Results == null || tempTag1Results == "")
+                    && (infoList.get(6).equals(tempTag2Results) || tempTag2Results == null || tempTag2Results == "")
+                    && (infoList.get(7).equals(tempTag3Results) || tempTag3Results == null || tempTag3Results == "")){
                 queryList.add(info + "\n");
             }
 
