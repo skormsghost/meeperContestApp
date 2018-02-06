@@ -6,6 +6,7 @@
     android:layout_height="match_parent"
     android:focusable="true"
     android:focusableInTouchMode="true"
+    android:keepScreenOn="true"
     tools:context="com.example.skorm_000.MeeperContestApp.MainActivity"
     tools:layout_editor_absoluteY="81dp"
     tools:layout_editor_absoluteX="0dp">
@@ -257,37 +258,6 @@
 
             </FrameLayout>
 
-            <FrameLayout
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_weight="1.05">
-
-                <!--<EditText
-                    android:id="@+id/addressInput"
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:layout_gravity="bottom"
-                    android:background="@android:color/transparent"
-                    android:ems="10"
-                    android:gravity="bottom"
-                    android:hint="Address"
-                    android:inputType="textPostalAddress"
-                    android:textColor="#212121" />-->
-            </FrameLayout>
-
-            <FrameLayout
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_weight="1.1">
-
-                <!--<ImageView
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:layout_gravity="center"
-                    app:srcCompat="@drawable/formline_graphic" />-->
-
-            </FrameLayout>
-
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
@@ -365,6 +335,22 @@
                     android:background="@android:color/transparent"
                     android:scaleType="centerInside"
                     app:srcCompat="@drawable/meeper" />
+            </FrameLayout>
+
+            <FrameLayout
+                android:id="@+id/privacyPolicyButton"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1.08">
+
+                <TextView
+                    android:id="@+id/textView4"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:text="See Privacy Policy Here"
+                    android:textColor="#BDBDBD"
+                    android:textSize="28px" />
             </FrameLayout>
 
         </LinearLayout>

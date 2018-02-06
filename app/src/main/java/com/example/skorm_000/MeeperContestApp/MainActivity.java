@@ -2,6 +2,7 @@ package com.example.skorm_000.MeeperContestApp;
 
 import android.content.Context;
 import android.content.DialogInterface;
+import android.content.Intent;
 import android.content.SharedPreferences;
 import android.content.pm.PackageManager;
 import android.media.MediaScannerConnection;
@@ -259,6 +260,16 @@ public class MainActivity extends AppCompatActivity {
 
                 mainScreen.setVisibility(View.GONE);
                 termsAndConditionsLayout.setVisibility(View.VISIBLE);
+            }
+        });
+
+        FrameLayout privacyPolicyButton = (FrameLayout) findViewById(R.id.privacyPolicyButton);
+        privacyPolicyButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Uri uriUrl = Uri.parse("https://meeperbot.com/pages/privacy-policy");
+                Intent launchBrowser = new Intent(Intent.ACTION_VIEW, uriUrl);
+                startActivity(launchBrowser);
             }
         });
 
@@ -879,7 +890,7 @@ public class MainActivity extends AppCompatActivity {
                 }
                 infoList.add(insert);
             }
-
+            Log.d("MYTAG", infoList.toString());
             if((infoList.get(5).equals(tempTag1Results) || tempTag1Results == null || tempTag1Results == "")
                     && (infoList.get(6).equals(tempTag2Results) || tempTag2Results == null || tempTag2Results == "")
                     && (infoList.get(7).equals(tempTag3Results) || tempTag3Results == null || tempTag3Results == "")){
@@ -890,6 +901,8 @@ public class MainActivity extends AppCompatActivity {
 
         if(queryList.size() > 0) {
             exportFile(queryList);
+        }else{
+            Toast.makeText(MainActivity.this, "No entries to export", Toast.LENGTH_LONG).show();
         }
     }
 
